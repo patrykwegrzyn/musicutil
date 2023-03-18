@@ -1,0 +1,17 @@
+{
+  "name": "musicutil",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "index.js",
+  "browser": "dist/browser.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "babel-loader": "^8.2.3",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
+  }
+}
