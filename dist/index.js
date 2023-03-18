@@ -170,7 +170,6 @@ function lookup_scale(scale_type) {
   if (scaleIndex === -1) {
     throw Error("No scale found");
   }
-  // console.log({ scaleIndex, scale_type_normalised });
   return SCALES[scaleIndex];
 }
 function generate_scale_array(root_num, scale_data, length) {
@@ -275,10 +274,6 @@ function note_nums_to_names(note_nums_array, include_octave) {
     return note_num_to_name(n, include_octave);
   });
 }
-var names = note_nums_to_names(major, true);
-console.log({
-  names: names
-});
 /*
    Return a MIDI note number's frequency.
    @param note_num MIDI note number (0-127).

@@ -192,8 +192,6 @@ function note_num_to_name(note_num, include_octave) {
 function note_nums_to_names(note_nums_array, include_octave) {
   return note_nums_array.map((n) => note_num_to_name(n, include_octave));
 }
-const names = note_nums_to_names(major, true);
-console.log({ names });
 /*
    Return a MIDI note number's frequency.
    @param note_num MIDI note number (0-127).
