@@ -861,6 +861,10 @@ const SCALE_CHORD_DEGREES = [
   },
 ];
 
+/*
+  Used offline to generate the chord cross-references in the SCALES table above
+  Needs to be updated when either SCALES or CHORDS changes
+*/
 function generateChordLookups() {
   for (let s = 0; s < SCALES.length; s++) {
     SCALES[s].chords = [];
@@ -971,10 +975,6 @@ function lookup_data(lookup_array, search) {
   return lookup_array[index];
 }
 
-/*
-  Used offline to generate the chord cross-references in the SCALES table above
-  Needs to be updated when either SCALES or CHORDS changes
-*/
 function generate_scale_array(root_num, scale_data, length) {
   const out_array = [];
   const scale_len = scale_data.intervals.length;

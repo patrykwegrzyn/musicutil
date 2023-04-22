@@ -337,6 +337,11 @@ var SCALE_CHORD_DEGREES = [{
   name: "Locrian",
   chords: ["i°", "II", "iii", "iv", "V", "VI", "vii", "i°7", "II7", "iii7", "iv7", "V7", "VI7", "vii7"]
 }];
+
+/*
+  Used offline to generate the chord cross-references in the SCALES table above
+  Needs to be updated when either SCALES or CHORDS changes
+*/
 function generateChordLookups() {
   for (var s = 0; s < SCALES.length; s++) {
     SCALES[s].chords = [];
@@ -419,11 +424,6 @@ function lookup_data(lookup_array, search) {
   }
   return lookup_array[index];
 }
-
-/*
-  Used offline to generate the chord cross-references in the SCALES table above
-  Needs to be updated when either SCALES or CHORDS changes
-*/
 function generate_scale_array(root_num, scale_data, length) {
   var out_array = [];
   var scale_len = scale_data.intervals.length;
